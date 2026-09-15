@@ -8,7 +8,7 @@ import morgan from "morgan";
 import authRoutes from "./routes/auth.routes.js";
 import memberRequestRoutes from "./routes/memberRequest.routes.js";
 import complaintRoutes from "./routes/complaintRoutes.js";
-
+import flatRoutes from "./routes/flatRoutes.js";
 
 
 const app = express();
@@ -34,5 +34,8 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/member-requests", memberRequestRoutes);
 app.use("/api/complaints", complaintRoutes );
+
+app.use("/api/flats", flatRoutes);
+
 
 export default app;
